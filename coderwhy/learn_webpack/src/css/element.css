@@ -1,0 +1,5 @@
+.title {
+  color: red;
+   /* 是否能选取元素的文本 */
+  user-select: none;
+}
