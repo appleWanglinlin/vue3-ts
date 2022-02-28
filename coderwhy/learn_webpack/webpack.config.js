@@ -7,6 +7,7 @@ const { VueLoaderPlugin } = require('vue-loader/dist/index')
 module.exports = {
   mode: 'development',
   devtool: 'source-map', // 使错误可以定位到哪一行
+  // watch: true, // 配置后不需要再执行npm run build,可刷新页面后更新
   entry: './src/main.js',
   output: {
     // path: 'D:/study/coderwhy/learn_webpack/build' // 必须写绝对路径
