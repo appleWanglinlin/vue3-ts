@@ -1,13 +1,16 @@
 <template>
-  <h4>12</h4>
+  <h4>{{ message }}</h4>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      message: '11'
+      message: '12'
     }
+  },
+  created () {
+    console.log('message', this.message)
   }
 }
 </script>

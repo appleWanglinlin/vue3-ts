@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "axios": "^0.26.0",
     "vue": "^3.2.31"
   },
   "devDependencies": {

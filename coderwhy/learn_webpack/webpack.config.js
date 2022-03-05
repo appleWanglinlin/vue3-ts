@@ -14,6 +14,15 @@ module.exports = {
     path: path.resolve(__dirname, './build'), // __dirname获取webpack.config.js所在的绝对路径
     filename: 'js/bundle.js'
   },
+  devServer: {
+    // contentBase: './abc' // 弃用了
+    static: './public',
+    hot: true, // 从 webpack-dev-server v4 开始，HMR 是默认启用的。
+    // host: '0.0.0.0',
+    // port: '8000',
+    // open: true,
+    // compress: true // 好像默认就是开启的,
+  },
   module: {
     rules: [
       {
@@ -152,19 +161,19 @@ module.exports = {
       __VUE_PROD_DEVTOOLS__: false,
       __VUE_OPTIONS_API__: true
     }),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: 'public',
-          to: './',
-          globOptions: {
-            ignore: [
-              "**/index.html"
-            ]
-          }
-        }    
-      ]
-    }),
+    // new CopyWebpackPlugin({
+    //   patterns: [
+    //     {
+    //       from: 'public',
+    //       to: './',
+    //       globOptions: {
+    //         ignore: [
+    //           "**/index.html"
+    //         ]
+    //       }
+    //     }    
+    //   ]
+    // }),
     new VueLoaderPlugin()
   ]
 }

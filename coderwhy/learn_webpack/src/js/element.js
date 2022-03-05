@@ -26,3 +26,7 @@ setTimeout(() => {
   document.body.appendChild(imgEl)
   document.body.appendChild(iEl)
 })
+
+setTimeout(() => {
+  console.log(666)
+}, 2000)
